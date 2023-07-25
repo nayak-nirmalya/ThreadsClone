@@ -1,4 +1,4 @@
-import { Pressable, StyleSheet, View, useColorScheme } from "react-native";
+import { Pressable, StyleSheet, View } from "react-native";
 import { Image } from "expo-image";
 
 import { Text } from "@/components/Themed";
@@ -48,10 +48,5 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     gap: 6,
     paddingBottom: 18,
-  },
-  image: {
-    width: 40,
-    height: 40,
-    borderRadius: 20,
   },
 });
