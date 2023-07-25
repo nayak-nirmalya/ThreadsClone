@@ -7534,6 +7534,20 @@ __metadata:
   languageName: node
   linkType: hard
 
+"lottie-react-native@npm:^6.0.0":
+  version: 6.0.0
+  resolution: "lottie-react-native@npm:6.0.0"
+  peerDependencies:
+    react: "*"
+    react-native: ">=0.46"
+    react-native-windows: ">=0.63.x"
+  peerDependenciesMeta:
+    react-native-windows:
+      optional: true
+  checksum: 517539e388f83748e369b5b8e1c9a0055e09dc46774c6d0c174ab4a917ab86e245794c540a0e173a87d1934b7a2aed6d711538dbc22571e3d9f249097cbed551
+  languageName: node
+  linkType: hard
+
 "lru-cache@npm:^5.1.1":
   version: 5.1.1
   resolution: "lru-cache@npm:5.1.1"
@@ -10594,6 +10608,7 @@ __metadata:
     expo-web-browser: ~12.3.2
     jest: ^29.2.1
     jest-expo: ~49.0.0
+    lottie-react-native: ^6.0.0
     react: 18.2.0
     react-dom: 18.2.0
     react-native: 0.72.3
