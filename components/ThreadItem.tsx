@@ -3,10 +3,12 @@ import { Image } from "expo-image";
 import { Ionicons, Feather, AntDesign, FontAwesome } from "@expo/vector-icons";
 import { MaterialIcons } from "@expo/vector-icons";
 
-import { timeAgo } from "@/utils/timeAgo";
 import { Text } from "@/components/Themed";
-import { Thread } from "@/types/threads";
 import BottomIcons from "@/components/BottomIcons";
+import PostFooter from "@/components/PostFooter";
+
+import { timeAgo } from "@/utils/timeAgo";
+import { Thread } from "@/types/threads";
 
 interface TheradItemProps {
   thread: Thread;
@@ -116,14 +118,6 @@ function PostHeading({
         <Feather name="more-horizontal" size={14} color="gray" />
       </View>
     </View>
-  );
-}
-
-function PostFooter({ replies, likes }: { replies: number; likes: number }) {
-  return (
-    <Text style={{ color: "gray" }}>
-      {replies} replies · {likes} likes
-    </Text>
   );
 }
 
