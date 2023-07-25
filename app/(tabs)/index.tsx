@@ -3,14 +3,12 @@ import {
   RefreshControl,
   SafeAreaView,
   ScrollView,
-  StyleSheet,
 } from "react-native";
 import Lottie from "lottie-react-native";
 import { useRef, useContext } from "react";
 
-import EditScreenInfo from "@/components/EditScreenInfo";
-import { Text, View } from "@/components/Themed";
 import { ThreadContext } from "@/context/thread-context";
+import ThreadItem from "@/components/ThreadItem";
 
 export default function TabOneScreen() {
   const animationRef = useRef<Lottie>(null);
@@ -21,7 +19,7 @@ export default function TabOneScreen() {
       <ScrollView
         contentContainerStyle={{
           paddingHorizontal: 10,
-          paddingTop: Platform.select({ android: 30 }),
+          paddingTop: Platform.select({ android: 5 }),
         }}
         refreshControl={
           <RefreshControl
@@ -39,11 +37,9 @@ export default function TabOneScreen() {
           style={{ width: 90, height: 90, alignSelf: "center" }}
         />
         {threads.map((thread) => (
-          <Text key={thread.id}>{thread.author.name}</Text>
+          <ThreadItem key={thread.id} thread={thread} />
         ))}
       </ScrollView>
     </SafeAreaView>
   );
 }
-
-const styles = StyleSheet.create({});
