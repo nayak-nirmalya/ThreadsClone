@@ -6,6 +6,7 @@ import { MaterialIcons } from "@expo/vector-icons";
 import { timeAgo } from "@/utils/timeAgo";
 import { Text } from "@/components/Themed";
 import { Thread } from "@/types/threads";
+import BottomIcons from "@/components/BottomIcons";
 
 interface TheradItemProps {
   thread: Thread;
@@ -123,20 +124,6 @@ function PostFooter({ replies, likes }: { replies: number; likes: number }) {
     <Text style={{ color: "gray" }}>
       {replies} replies · {likes} likes
     </Text>
-  );
-}
-
-function BottomIcons() {
-  const iconSize = 20;
-  const currentTheme = useColorScheme();
-  const iconColor = currentTheme === "dark" ? "white" : "black";
-  return (
-    <View style={{ flexDirection: "row", alignItems: "center", gap: 10 }}>
-      <FontAwesome name="heart-o" size={iconSize} color={iconColor} />
-      <Ionicons name="chatbubble-outline" size={iconSize} color={iconColor} />
-      <AntDesign name="retweet" size={iconSize} color={iconColor} />
-      <Feather name="send" size={iconSize} color={iconColor} />
-    </View>
   );
 }
 
