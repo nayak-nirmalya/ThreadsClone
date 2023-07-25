@@ -73,6 +73,7 @@ function PostLeftSide(thread: Thread) {
         {[1, 2, 3].map((index) => (
           <Image
             key={index}
+            // @ts-ignore
             source={thread.replies[index - 1]?.author.photo}
             style={{ width: index * 7, height: index * 7, borderRadius: 15 }}
             placeholder={blurhash}
@@ -143,7 +144,7 @@ const styles = StyleSheet.create({
   container: {
     flexDirection: "row",
     gap: 6,
-    paddingBottom: 30,
+    paddingBottom: 18,
   },
   image: {
     width: 40,

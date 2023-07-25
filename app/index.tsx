@@ -10,7 +10,7 @@ import { useRef, useContext } from "react";
 import { ThreadContext } from "@/context/thread-context";
 import ThreadItem from "@/components/ThreadItem";
 
-export default function TabOneScreen() {
+export default function HomePage() {
   const animationRef = useRef<Lottie>(null);
   const threads = useContext(ThreadContext);
 
@@ -19,7 +19,7 @@ export default function TabOneScreen() {
       <ScrollView
         contentContainerStyle={{
           paddingHorizontal: 10,
-          paddingTop: Platform.select({ android: 5 }),
+          paddingTop: Platform.select({ android: 8 }),
         }}
         refreshControl={
           <RefreshControl
