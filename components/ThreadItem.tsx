@@ -5,6 +5,7 @@ import { Text } from "@/components/Themed";
 import BottomIcons from "@/components/BottomIcons";
 import PostFooter from "@/components/PostFooter";
 import PostHeading from "@/components/PostHeading";
+import PostLeftSide from "@/components/PostLeftSide";
 
 import { Thread } from "@/types/threads";
 
@@ -39,51 +40,6 @@ export default function ThreadItem({ thread }: TheradItemProps): JSX.Element {
         <PostFooter replies={thread.repliesCount} likes={thread.likesCount} />
       </View>
     </Pressable>
-  );
-}
-
-function PostLeftSide(thread: Thread) {
-  const currentTheme = useColorScheme();
-  const borderColor = currentTheme === "light" ? "#00000020" : "#ffffff20";
-
-  return (
-    <View style={{ justifyContent: "space-between" }}>
-      <Image
-        source={thread.author.photo}
-        style={styles.image}
-        placeholder={blurhash}
-        contentFit="cover"
-        transition={500}
-      />
-      <View
-        style={{
-          borderWidth: 1,
-          alignSelf: "center",
-          borderColor: borderColor,
-          flexGrow: 1,
-        }}
-      />
-      <View
-        style={{
-          width: 20,
-          alignItems: "center",
-          alignSelf: "center",
-          gap: 3,
-        }}
-      >
-        {[1, 2, 3].map((index) => (
-          <Image
-            key={index}
-            // @ts-ignore
-            source={thread.replies[index - 1]?.author.photo}
-            style={{ width: index * 7, height: index * 7, borderRadius: 15 }}
-            placeholder={blurhash}
-            contentFit="cover"
-            transition={500}
-          />
-        ))}
-      </View>
-    </View>
   );
 }
 
