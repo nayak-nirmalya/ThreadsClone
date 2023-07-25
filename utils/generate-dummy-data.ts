@@ -1,4 +1,5 @@
 import { faker } from "@faker-js/faker";
+
 import { Thread, User } from "@/types/threads";
 
 export function createRandomFollower(): User {
